@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     // MARK:- outlets
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
