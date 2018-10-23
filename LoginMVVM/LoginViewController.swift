@@ -15,14 +15,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet fileprivate weak var passwordLabel: UITextField!
     @IBOutlet fileprivate weak var loginButton: UIButton!
     
+    fileprivate let viewModel = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupBinding()
+    }
+    
+    fileprivate func setupBinding() {
+        
+        viewModel.loginState.observe { [unowned self] state in
+            switch state {
+            case .initial (let enable): self.loginButton.isEnabled = enable
+            case .informationFilled (let enable): self.loginButton.isEnabled = enable
+            case .loginPressed (let enable): self.loginButton.isEnabled = enable
+            }
+        }
+    }
+    
+    // MARK:- Button Handlers
+    @IBAction func loginPressed(_ sender: Any) {
+        viewModel.loginPressed()
     }
 
     // MARK:- text field delegate
     public func textFieldDidBeginEditing(_ textField: UITextField) {
-        // keyboard up
+        
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -30,7 +48,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        // keyboard down
+        viewModel.enableLogin(for: usernameTextField.text, and: passwordLabel.text)
     }
 
 }

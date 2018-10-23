@@ -8,66 +8,35 @@
 
 import Foundation
 
-struct LoginState {
-    var buttonIsEnabled: Bool
+enum LoginState {
+    case initial(Bool)
+    case informationFilled(Bool)
+    case loginPressed(Bool)
 }
 
-enum MyLoginState {
-    case intial
-    case informationFilled
-    case loginPressed
-}
-
-class ViewModel {
+class LoginViewModel {
     
-    private(set) var loginState: MyLoginState = .intial {
-        didSet {
-            stateCheck()
-        }
-    }
+    // MARK: - bindings
+    private(set) var loginState = Bindable<LoginState>(value: .initial(false))
     
-    private(set) var state: LoginState = LoginState(buttonIsEnabled: false) {
-        didSet {
-            callback(state)
-        }
-    }
-    
-    typealias CallbackHandler = ((LoginState) -> Void)
-    
-    var callback: CallbackHandler
-    
-    init(callback: @escaping CallbackHandler) {
-        self.callback = callback
-        self.callback(state)
-    }
-    
-    
+    // MARK: - public methods
     func loginPressed() {
-        loginState = .loginPressed
+        updateLoginState(.loginPressed(false))
     }
     
-    func enableLoginIfRequired(usernameText: String?, passwordText: String?) {
+    func enableLogin(for usernameText: String?, and passwordText: String?) {
         if let username = usernameText,
             !username.isEmpty,
             let password = passwordText,
             !password.isEmpty {
-            loginState = .informationFilled
+            updateLoginState(.informationFilled(false))
         } else {
-            loginState = .intial
+            updateLoginState(.initial(false))
         }
     }
     
-    private func stateCheck() {
-        switch loginState {
-        case .intial:
-            state.buttonIsEnabled = false
-            break
-        case .informationFilled:
-            state.buttonIsEnabled = true
-            break
-        case .loginPressed:
-            state.buttonIsEnabled = false
-            break
-        }
+    // MARK: - helper methods
+    fileprivate func updateLoginState(_ state: LoginState) {
+        loginState.value = state
     }
 }

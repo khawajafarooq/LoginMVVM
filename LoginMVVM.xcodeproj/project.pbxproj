@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0331B286217FC82800AD76A2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331B285217FC82800AD76A2 /* LoginViewModel.swift */; };
+		0331B288217FCA9F00AD76A2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0331B287217FCA9F00AD76A2 /* Bindable.swift */; };
 		03E5E4CC217FC64D00837D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5E4CB217FC64D00837D87 /* AppDelegate.swift */; };
 		03E5E4CE217FC64D00837D87 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5E4CD217FC64D00837D87 /* LoginViewController.swift */; };
 		03E5E4D1217FC64D00837D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E5E4CF217FC64D00837D87 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0331B285217FC82800AD76A2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		0331B287217FCA9F00AD76A2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		03E5E4C8217FC64D00837D87 /* LoginMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E5E4CB217FC64D00837D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E5E4CD217FC64D00837D87 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				03E5E4D4217FC64E00837D87 /* LaunchScreen.storyboard */,
 				03E5E4D7217FC64E00837D87 /* Info.plist */,
 				0331B285217FC82800AD76A2 /* LoginViewModel.swift */,
+				0331B287217FCA9F00AD76A2 /* Bindable.swift */,
 			);
 			path = LoginMVVM;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				03E5E4CE217FC64D00837D87 /* LoginViewController.swift in Sources */,
 				03E5E4CC217FC64D00837D87 /* AppDelegate.swift in Sources */,
+				0331B288217FCA9F00AD76A2 /* Bindable.swift in Sources */,
 				0331B286217FC82800AD76A2 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
