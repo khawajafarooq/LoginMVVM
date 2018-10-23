@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     // MARK:- outlets
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
@@ -20,6 +20,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    // MARK:- text field delegate
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        // keyboard up
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        // keyboard down
+    }
 
 }
 
