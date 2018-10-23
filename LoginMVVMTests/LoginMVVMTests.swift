@@ -24,22 +24,42 @@ class LoginMVVMTests: XCTestCase {
     }
     
     func testViewInitialState() {
+        // Given Login View Model is initiated
+        
+        // When
         loginViewModel.viewLoaded()
+        
+        // Then
         XCTAssert(loginViewModel.loginState.value == .initial(false))
     }
     
     func testEmptyTextFieldsState() {
+        // Given Login View Model is initiated
+        
+        // When
         loginViewModel.enableLogin(for: "", and: "")
+        
+        // Then
         XCTAssert(loginViewModel.loginState.value == .initial(false))
     }
     
     func testFilledTextFieldsState() {
+        // Given Login View Model is initiated
+        
+        // When
         loginViewModel.enableLogin(for: "username", and: "password")
+        
+        // Then
         XCTAssert(loginViewModel.loginState.value == .informationFilled(true))
     }
     
     func testLoginPressedState() {
+        // Given Login View Model is initiated
+        
+        // When
         loginViewModel.loginPressed()
+        
+        // Then
         XCTAssert(loginViewModel.loginState.value == .loginPressed(false))
     }
 }
