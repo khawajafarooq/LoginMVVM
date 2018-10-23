@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK:- outlets
+    @IBOutlet fileprivate weak var usernameTextField: UITextField!
+    @IBOutlet fileprivate weak var passwordLabel: UITextField!
+    @IBOutlet fileprivate weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
