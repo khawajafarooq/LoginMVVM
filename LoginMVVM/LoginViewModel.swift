@@ -20,6 +20,10 @@ class LoginViewModel {
     private(set) var loginState = Bindable<LoginState>(value: .initial(false))
     
     // MARK: - public methods
+    func viewLoaded() {
+        updateLoginState(.initial(false))
+    }
+    
     func loginPressed() {
         updateLoginState(.loginPressed(false))
     }
@@ -29,7 +33,7 @@ class LoginViewModel {
             !username.isEmpty,
             let password = passwordText,
             !password.isEmpty {
-            updateLoginState(.informationFilled(false))
+            updateLoginState(.informationFilled(true))
         } else {
             updateLoginState(.initial(false))
         }
