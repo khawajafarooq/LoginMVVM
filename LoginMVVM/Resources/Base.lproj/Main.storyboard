@@ -30,7 +30,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Neo-Lk-KOb">
-                                <rect key="frame" x="16" y="587" width="343" height="30"/>
+                                <rect key="frame" x="168.5" y="587" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aXK-hp-zoo"/>
@@ -51,9 +51,9 @@
                             <constraint firstItem="oWC-es-SST" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3Eh-Nq-069"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Neo-Lk-KOb" secondAttribute="bottom" constant="50" id="5fk-Aa-DD8"/>
                             <constraint firstItem="Neo-Lk-KOb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CVH-uP-usd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Neo-Lk-KOb" secondAttribute="trailing" constant="16" id="D3q-ZO-vjs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Neo-Lk-KOb" secondAttribute="trailing" id="D3q-ZO-vjs"/>
                             <constraint firstItem="Ds9-86-eiB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MMw-wB-2x5"/>
-                            <constraint firstItem="Neo-Lk-KOb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MoA-FK-A38"/>
+                            <constraint firstItem="Neo-Lk-KOb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MoA-FK-A38"/>
                             <constraint firstItem="Ds9-86-eiB" firstAttribute="top" secondItem="oWC-es-SST" secondAttribute="bottom" constant="25" id="Tyj-wA-B1s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oWC-es-SST" secondAttribute="trailing" constant="16" id="Yjg-oG-ltP"/>
                             <constraint firstItem="Ds9-86-eiB" firstAttribute="height" secondItem="oWC-es-SST" secondAttribute="height" id="nhe-dJ-sYc"/>

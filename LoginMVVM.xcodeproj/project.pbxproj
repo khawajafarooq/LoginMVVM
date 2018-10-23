@@ -30,13 +30,13 @@
 /* Begin PBXFileReference section */
 		0331B285217FC82800AD76A2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0331B287217FCA9F00AD76A2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		0331B28E217FD18F00AD76A2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LoginMVVM/Info.plist; sourceTree = SOURCE_ROOT; };
 		03E5E4C8217FC64D00837D87 /* LoginMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E5E4CB217FC64D00837D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03E5E4CD217FC64D00837D87 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		03E5E4D0217FC64D00837D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03E5E4D2217FC64E00837D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03E5E4D5217FC64E00837D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		03E5E4D7217FC64E00837D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03E5E4DC217FC64E00837D87 /* LoginMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E5E4E0217FC64E00837D87 /* LoginMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMVVMTests.swift; sourceTree = "<group>"; };
 		03E5E4E2217FC64E00837D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +60,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0331B289217FD13300AD76A2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0331B287217FCA9F00AD76A2 /* Bindable.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0331B28A217FD13E00AD76A2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0331B28C217FD15200AD76A2 /* Main */,
+				0331B28B217FD14600AD76A2 /* Login */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0331B28B217FD14600AD76A2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				03E5E4CD217FC64D00837D87 /* LoginViewController.swift */,
+				0331B285217FC82800AD76A2 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0331B28C217FD15200AD76A2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				03E5E4CB217FC64D00837D87 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0331B28D217FD15D00AD76A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0331B28E217FD18F00AD76A2 /* Info.plist */,
+				03E5E4CF217FC64D00837D87 /* Main.storyboard */,
+				03E5E4D2217FC64E00837D87 /* Assets.xcassets */,
+				03E5E4D4217FC64E00837D87 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		03E5E4BF217FC64D00837D87 = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +126,9 @@
 		03E5E4CA217FC64D00837D87 /* LoginMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				03E5E4CB217FC64D00837D87 /* AppDelegate.swift */,
-				03E5E4CD217FC64D00837D87 /* LoginViewController.swift */,
-				03E5E4CF217FC64D00837D87 /* Main.storyboard */,
-				03E5E4D2217FC64E00837D87 /* Assets.xcassets */,
-				03E5E4D4217FC64E00837D87 /* LaunchScreen.storyboard */,
-				03E5E4D7217FC64E00837D87 /* Info.plist */,
-				0331B285217FC82800AD76A2 /* LoginViewModel.swift */,
-				0331B287217FCA9F00AD76A2 /* Bindable.swift */,
+				0331B28A217FD13E00AD76A2 /* Application */,
+				0331B289217FD13300AD76A2 /* Core */,
+				0331B28D217FD15D00AD76A2 /* Resources */,
 			);
 			path = LoginMVVM;
 			sourceTree = "<group>";
