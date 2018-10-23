@@ -11,26 +11,35 @@ import XCTest
 
 class LoginMVVMTests: XCTestCase {
     
+    var loginViewModel: LoginViewModel!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        loginViewModel = LoginViewModel()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        loginViewModel = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testViewInitialState() {
+        loginViewModel.viewLoaded()
+        XCTAssert(loginViewModel.loginState.value == .initial(false))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testEmptyTextFieldsState() {
+        loginViewModel.enableLogin(for: "", and: "")
+        XCTAssert(loginViewModel.loginState.value == .initial(false))
     }
     
+    func testFilledTextFieldsState() {
+        loginViewModel.enableLogin(for: "username", and: "password")
+        XCTAssert(loginViewModel.loginState.value == .informationFilled(true))
+    }
+    
+    func testLoginPressedState() {
+        loginViewModel.loginPressed()
+        XCTAssert(loginViewModel.loginState.value == .loginPressed(false))
+    }
 }

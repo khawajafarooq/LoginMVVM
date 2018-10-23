@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum LoginState {
+enum LoginState: Equatable {
     case initial(Bool)
     case informationFilled(Bool)
     case loginPressed(Bool)
